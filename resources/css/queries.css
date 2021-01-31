@@ -120,6 +120,28 @@
     font-size: 100%;
   }
 
+  .section-cities {
+    text-align: center;
+  }
+
+  .section-features {
+    text-align: center;
+  }
+
+  .section-features .icon-big {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-testimonials cite {
+    text-align: center;
+  }
+
+  .section-plans {
+    text-align: center;
+  }
+
   .sticky .main-nav {
     margin-top: 10px;
   }

@@ -9,6 +9,10 @@ orange color = #e67e22
   box-sizing: border-box;
 }
 
+:root {
+  --main-color: #e67e22;
+}
+
 html,
 body {
   background-color: #fff;
@@ -81,7 +85,7 @@ h3 {
 h2:after {
   display: block;
   height: 2px;
-  background-color: #e67e22;
+  background-color: var(--main-color);
   content: "";
   width: 100px;
   margin: 0 auto;
@@ -105,14 +109,14 @@ h2:after {
   font-size: 350%;
   margin-bottom: 10px;
   display: block;
-  color: #e67e22;
+  color: var(--main-color);
 }
 
 .icon-sml {
   display: inline-block;
   width: 30px;
   text-align: center;
-  color: #e67e22;
+  color: var(--main-color);
   font-size: 120%;
   margin-right: 10px;
   vertical-align: middle;
@@ -123,9 +127,9 @@ h2:after {
 a:link,
 a:visited {
   padding-bottom: 1px;
-  color: #e67e22;
+  color: var(--main-color);
   text-decoration: none;
-  border-bottom: 1px solid #e67e22;
+  border-bottom: 1px solid var(--main-color);
   transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -150,16 +154,16 @@ input[type="submit"] {
 .btn-full:link,
 .btn-full:visited,
 input[type="submit"] {
-  background-color: #e67e22;
-  border: 1px solid #e67e22;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
   color: white;
   margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  border: 1px solid #e67e22;
-  color: #e67e22;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
 }
 
 .btn:hover,
@@ -186,7 +190,7 @@ HEADER
 --------------------------------------- */
 
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(img/hero.jpg);
   background-size: cover;
   background-position: center;
@@ -202,11 +206,17 @@ header {
   transform: translate(-50%, -50%);
 }
 
+.title {
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
 .logo {
   width: 100px;
   height: auto;
   float: left;
-  margin-top: 20px;
+  margin: 10px 0;
+  position: relative;
 }
 
 .logo-black {
@@ -218,10 +228,15 @@ header {
 }
 
 /* main nav */
+
+nav {
+  background-color: #f4f4f4;
+}
+
 .main-nav {
   float: right;
   list-style: none;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 /* mobile navi */
@@ -234,7 +249,7 @@ header {
 
 ion-icon[name="menu-outline"] {
   font-size: 200%;
-  color: white;
+  color: black;
 }
 
 /* sticky nav */
@@ -273,17 +288,17 @@ ion-icon[name="menu-outline"] {
 .main-nav li a:link,
 .main-nav li a:visited {
   padding: 8px 0;
-  color: white;
+  color: #555;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 90%;
+  font-size: 95%;
   border-bottom: 2px transparent;
   transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 2px solid var(--main-color);
 }
 
 /* ---------------------------------------
@@ -316,6 +331,7 @@ MEALS
 .meal-photo {
   width: 100%;
   margin: 0;
+
   overflow: hidden;
   background-color: black;
 }
@@ -323,7 +339,8 @@ MEALS
 .meal-photo img {
   opacity: 0.7;
   width: 100%;
-  height: auto;
+  height: 35vh;
+  object-fit: cover;
   transform: scale(1.2);
   transition: transform 0.5s, opacity 0.5s;
 }
@@ -353,7 +370,7 @@ HOW IT WORKS
 }
 
 .app-screen {
-  width: 40%;
+  width: 55%;
 }
 
 .works-step {
@@ -365,8 +382,8 @@ HOW IT WORKS
 }
 
 .works-step div {
-  color: #e67e22;
-  border: 2px solid #e67e22;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
   border-radius: 50%;
   height: 55px;
   width: 55px;
@@ -394,7 +411,8 @@ CITIES
 
 .section-cities img {
   width: 100%;
-  height: auto;
+  height: 150px;
+  object-fit: cover;
   margin-bottom: 15px;
 }
 
@@ -463,7 +481,7 @@ PRICING
   font-size: 300%;
   margin-bottom: 10px;
   font-weight: 100;
-  color: #e67e22;
+  color: var(--main-color);
 }
 
 .plan-price span {
