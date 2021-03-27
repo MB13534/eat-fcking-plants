@@ -8,9 +8,9 @@ orange color = #e67e22
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
-  --main-color: #e67e22;
+  --main-color: #8400b8;
+  --secondary-color: #470063;
 }
 
 html,
@@ -162,27 +162,29 @@ input[type="submit"] {
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: white;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #cf6d17;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--main-color);
 }
 
 .btn-full:hover,
 .btn-full:active,
 input[type="submit"]:hover,
 input[type="submit"]:active {
-  border: 1px solid #cf6d17;
+  border: 1px solid var(--secondary-color);
   cursor: pointer;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-  border: 1px solid #cf6d17;
-  color: #fff;
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
 }
 
 /* ---------------------------------------
@@ -292,6 +294,7 @@ ion-icon[name="menu-outline"] {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 95%;
+  font-weight: 700;
   border-bottom: 2px transparent;
   transition: border-bottom 0.2s;
 }
@@ -480,7 +483,7 @@ PRICING
 .plan-price {
   font-size: 300%;
   margin-bottom: 10px;
-  font-weight: 100;
+  font-weight: 300;
   color: var(--main-color);
 }
 
